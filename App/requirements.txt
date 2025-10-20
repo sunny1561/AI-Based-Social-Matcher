@@ -1,0 +1,10 @@
+flask
+peewee
+faiss-cpu
+numpy
+gradio
+langchain-community
+sentence-transformers
+python-dotenv
+streamlit
+together

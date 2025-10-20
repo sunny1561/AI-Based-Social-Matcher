@@ -1,0 +1,43 @@
+# below are the curl command you can directly paste over postman makee endpoints
+1. Create a User
+
+curl -X POST http://127.0.0.1:5000/create_user -H "Content-Type: application/json" -d '{
+  "username": "Alice"
+}'
+
+
+
+2. Post an Image
+
+curl -X POST http://127.0.0.1:5000/post_image -H "Content-Type: application/json" -d '{
+  "title": "Sunset",
+  "author_id": 1,
+  "description": "A beautiful sunset",
+  "price": 50.0,
+  "sole_buyer": true,
+  "labels": "nature,sky,orange"
+}'
+
+
+3. Get Marketplace Feed
+
+curl -X GET http://127.0.0.1:5000/feed
+
+4. Search Images
+
+curl -X GET "http://127.0.0.1:5000/search?label=nature&author=Alice"
+
+5. Like an Image
+
+curl -X POST http://127.0.0.1:5000/like/1/1
+
+
+6. Rate an Image
+
+curl -X POST http://127.0.0.1:5000/rate/1/1 -H "Content-Type: application/json" -d '{
+  "stars": 5
+}'
+
+7. Filter Images
+
+curl -X GET "http://127.0.0.1:5000/filter?min_price=10&max_price=100&min_rating=4"
